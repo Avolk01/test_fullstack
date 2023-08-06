@@ -1,0 +1,115 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: coral;
+}
+.todo-list{
+    width: 100%;
+    max-width: 500px;
+    margin: 100px auto 20px;
+    padding: 40px;
+    background-color:white;
+    border-radius: 50px;
+    
+}
+
+.todo-logo{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: greenyellow;
+    border-radius: 50px;
+}
+
+.input-task-box{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;    
+}
+
+.add-task-button{
+    border: none;
+    outline: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.task-list li{
+    list-style: none;
+    padding: 15px 10px 15px 80px;    
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+}
+
+.task-list li::before{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    background-size: cover;
+    background-position: center;
+    top: 18px;
+    left: 20px;
+}
+
+.task-list li.checked {   
+    text-decoration: line-through;
+}
+
+.task-list li.checked::before {
+    background-color: greenyellow;
+}
+
+.task-list li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20%;
+    font-weight: 900;
+}
+
+.task-list li div{
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20%;
+    content: url("http://cdn.onlinewebfonts.com/svg/img_369247.png");
+}
+
+.task-list li span:hover{
+    background: lightgray;
+}
+
+.task-list li div:hover{
+    background: lightgray;
+}
+
+.item.dragging{
+    opacity: 0.5;
+}
+
+
